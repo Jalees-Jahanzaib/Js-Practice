@@ -1,15 +1,16 @@
-function isVaidPassword(username ,password ){
+function avg(arr){
 
-   	 if(password.length < 8)
-   	  return false;
-  
-if(password.indexOf(' ')!== -1)
-    return false;
-if (password.indexOf(username)!==-1)
-    return false;
-
-return true;
+let x=0;
+for( let num  in arr ){
+console.log(`${num}`)
+x+=arr[num];
 }
-let x= isVaidPassword('jalees',"123jale s455")
+console.log(`${x}`)
 
-console.log(`${x}`);
+x=x/arr.length;
+return x;
+
+}
+
+let y=avg([5,10]);
+
