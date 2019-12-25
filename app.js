@@ -1,15 +1,27 @@
-const math={
-	numbers:[1,2,3,4,5,6],
-	add: (x,y)=> {
-		return x*y;
-	}
+function sayHi() {
+  console.log("HI")
+  //this refers to the window (global scope object in the browser)
+  console.log(this);
 }
-const math3={
-	numbers:[1,2,3,4,5,6],
-	add: function (x,y) {
-		return x*y;
-	}
+
+
+const person = {
+  first: 'Cherilyn',
+  last: 'Sarkisian',
+  nickName: 'Cher',
+  fullName() {
+    //In a method, this refers to the object the method "lives" in:
+    const {
+      first,
+      last,
+      nickName
+    } = this;
+    return `${first} ${last } AKA ${nickName}`;
+  },
+  printBio() {
+    const fullName = this.fullName();
+    console.log(`${fullName} is a person!`)
+  }
 }
-const jalees=(x,y)=>{
-	return x*x +y*y;
-}
+
+// const lala=person.printBio();
