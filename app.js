@@ -1,7 +1,8 @@
-const words =['asap','byob','rsvp','diy'];
-const words2=words.map(function to(word){
-return word.toUpperCase().split('').join(".");
+//Arrow Functions
 
-
-})
-
+const square = function (x) {
+	return x*x;
+}
+const  life =(x)=>{
+	return x*x;
+}
