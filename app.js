@@ -1,21 +1,15 @@
-const car ={
-	Name :"BMW",
-	Color:"Blue",
-	Series:"S class"
+const math={
+	numbers:[1,2,3,4,5,6],
+	add: (x,y)=> {
+		return x*y;
+	}
 }
-
-
-const newo= (obj,k,v)=>{
-return {...obj,[k]:v}
+const math3={
+	numbers:[1,2,3,4,5,6],
+	add: function (x,y) {
+		return x*y;
+	}
 }
-let k="Speed"
-const newcar=newo(car,k,1000)
-
-
-function car2(obj,k,v){
-	car3={...obj};
-	car3[k]=v;
-	return car3;
+const jalees=(x,y)=>{
+	return x*x +y*y;
 }
-
-car4=car2(car,k,10000)
