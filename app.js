@@ -1,16 +1,35 @@
-const nums = [3, 4, 5, 6, 7];
-// To multiply all values in nums:
-const product = nums.reduce((total, currentVal) => {
-  return total * currentVal;
-});
+// The old way of adding a default value:
+// function multiply(x, y) {
+//   if (typeof y === 'undefined') {
+//     y = 1;
+//   }
+//   return x * y;
+// }
 
-// total    currentVal    returnVal
-// 3             4           12
-// 12            5           60
-// 60            6           360
-// 360           7           2520
+// A slightly shorter version:
+// function multiply(x, y) {
+//   y = typeof y === 'undefined' ? 1 : y
+//   return x * y;
+// }
 
-//Final Return Value: 2520
-const sum=nums.reduce((final,cueent)=>{
-	return final+cueent;
-})
+// The new super clean way of adding defaults!
+function multiply(x, y = 1) {
+  return x * y;
+}
+multiply(3, 4); //12
+multiply(3); //3
+
+// Another example!
+// const greet = (person, greeting = 'hi') => {
+//   console.log(`${greeting}, ${person}!`)
+// }
+
+// Default value of an array:
+// const blah = (x, y = [1, 2, 3]) => {
+//   console.log(x, y);
+// }
+
+// Multiple default values are possible, but rare
+// const greet = (person, greeting = 'hi', punctuation = '!') => {
+//   console.log(`${greeting}, ${person} ${punctuation}`)
+// }
