@@ -1,23 +1,17 @@
-// let movies = [
-//   "The Fantastic Mr. Fox",
-//   "Mr. and Mrs. Smith",
-//   "Mrs. Doubtfire",
-//   "Mr. Deeds"
-// ]
-
-
-
-// const movie=movies.find(n=>{
-// 	return n.indexOf("Mrs") ===0;
-// })
+let movies = [
+  "The Fantastic Mr. Fox",
+  "Mr. and Mrs. Smith",
+  "Mrs. Doubtfire",
+  "Mr. Deeds"
+]
 
 // Find first movie that includes 'Mrs' in its title:
-// const movie = movies.find(movie => {
-//   return movie.includes('Mrs');
-// })
+const movie = movies.find(movie => {
+  return movie.includes('Mrs');
+})
 
-// //Find first movie that begins with 'Mrs':
-// const movie2 = movies.find(m => m.indexOf("Mrs") === 0);
+//Find first movie that begins with 'Mrs':
+const movie2 = movies.find(m => m.indexOf("Mrs") === 0);
 
 const books = [{
     title: 'Good Omens',
@@ -41,13 +35,6 @@ const books = [{
   }
 ]
 //Find first book w/ rating over 4.3
-// const goodBook = books.find(b => b.rating >= 4.3);
-
-// //Find first book with Neil Gaiman as an author:
-// const neilBook = books.find(b => (
-//   b.authors.includes('Neil Gaiman')
-// ))
-
-const goodBook=books.find(n=>{
-	return n.rating>=4.42;
+const goodBook = books.some(books=>{
+	return books.rating>=4.4;
 })
