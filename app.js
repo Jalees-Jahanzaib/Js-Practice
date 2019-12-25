@@ -1,18 +1,49 @@
-// For each
-
- const numbers=[20,21,22,23,24,25,26,27,28,29]
-
-const double=numbers.map(function odd(num){
-	return num*2;
-});
-
-
-
-const double2=numbers.map((n,y)=>{
-	return n*n+ y;
-});
+let movies = [
+  "The Fantastic Mr. Fox",
+  "Mr. and Mrs. Smith",
+  "Mrs. Doubtfire",
+  "Mr. Deeds"
+]
 
 
 
-for(i=0;i<double2.length;i++)
-console.log(double2[i]);
+const movie=movies.find(n=>{
+	return n.indexOf("Mrs") ===0;
+})
+
+// Find first movie that includes 'Mrs' in its title:
+// const movie = movies.find(movie => {
+//   return movie.includes('Mrs');
+// })
+
+// //Find first movie that begins with 'Mrs':
+// const movie2 = movies.find(m => m.indexOf("Mrs") === 0);
+
+// const books = [{
+//     title: 'Good Omens',
+//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+//     rating: 4.25
+//   },
+//   {
+//     title: 'Bone: The Complete Edition',
+//     authors: ['Jeff Smith'],
+//     rating: 4.42
+//   },
+//   {
+//     title: 'American Gods',
+//     authors: ['Neil Gaiman'],
+//     rating: 4.11
+//   },
+//   {
+//     title: 'A Gentleman in Moscow',
+//     authors: ['Amor Towles'],
+//     rating: 4.36
+//   }
+// ]
+// //Find first book w/ rating over 4.3
+// const goodBook = books.find(b => b.rating >= 4.3);
+
+// //Find first book with Neil Gaiman as an author:
+// const neilBook = books.find(b => (
+//   b.authors.includes('Neil Gaiman')
+// ))
