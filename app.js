@@ -10,11 +10,15 @@ pickphrase(){
 ,
 start(){
 	
-	setInterval(()=>{
+	this.id=setInterval(()=>{
 console.log(this.pickphrase())
 
 	},3000);
-}
+},
+stop(){
+clearInterval(this.id)
+clear()
 
+}
 
 }
