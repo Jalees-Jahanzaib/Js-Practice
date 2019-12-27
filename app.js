@@ -1,24 +1,14 @@
-const annoyer= {
+// To select all elements with the class of 'special':
+document.getElementsByClassName('special');
 
-pharases:["literally",'crary cray','I cant even ',"YOLO","hc","actually",'aaa']
-,
-pickphrase(){
-	const arr=this.pharases;
-	const idx = Math.floor(Math.random()*arr.length);
-	return arr[idx];
-}
-,
-start(){
-	
-	this.id=setInterval(()=>{
-console.log(this.pickphrase())
+//getElementsByClassName also returns an array-like object.
+// We don't have access to array methods, but we can iterate:
 
-	},3000);
-},
-stop(){
-clearInterval(this.id)
-clear()
-
+const specials = document.getElementsByClassName('special');
+for (let el of specials) {
+  console.log(el);
 }
 
-}
+//We can use spread to make an actual array:
+const arr = [...specials];
+arr.pop() //this works because it's now an array!
